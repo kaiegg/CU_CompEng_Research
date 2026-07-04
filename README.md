@@ -1,2 +1,7 @@
-# CU_CompEng_Research
-My Research for Master Degree in Engineering
+
+# Thesis Research for My Master Degree
+
+Computer Engineering, Chulalongkorn University
+## Acknowledgements
+This is my first readme
+
