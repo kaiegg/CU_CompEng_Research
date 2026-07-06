@@ -45,11 +45,11 @@ These takeaways serve as a blueprint for solving complex AI engineering problems
 * **The Lesson:** When tackling a frontier problem that lacks standard evaluation metrics, building a robust, high-fidelity benchmark is just as valuable as building the model itself.
 * **The Application:** By establishing the `SA-3DAO` benchmark using professional-grade "human upper bound" targets, the researchers didn't just prove their own model's success; they set the standard and controlled the testing ground for all future iterations of 3D reconstruction research.
 
-### **7. Accept Information Loss and Shift from Calculation to PredictionThe Lesson: 
+### 7. Accept Information Loss and Shift from Calculation to PredictionThe Lesson: 
 * When flattening higher-dimensional data into a lower dimension (like mapping a 3D world onto 2D pixels), crucial information is permanently lost (e.g., the back of an object, depth). You cannot perfectly mathematically compute the missing data.
 * The Application: Instead of trying to force a strict, rule-based calculation (deterministic approach), model the task as a conditional probability distribution ($p$). Accept that multiple valid answers exist, and train a generative model ($q$) to predict the most plausible, visually convincing variations based on the hints left in the context.
 
-### **8. Disentangle Complex Outputs into Modular Sub-Properties
+### 8. Disentangle Complex Outputs into Modular Sub-Properties
 * The Lesson: Trying to force an AI to generate a complex, multi-layered asset all at once leads to high error rates and messy outputs.
 * The Application: Explicitly decouple your target object into independent, well-defined mathematical properties. In this case, the 3D asset is broken into:Geometry ($S$): The raw structural shape.Texture ($T$): The visual surface properties and colors.Pose ($R, t, s$): The spatial orientation (rotation, translation, scale).By modularizing the output variables, the network can optimize for shape, appearance, and placement more cleanly.
 
