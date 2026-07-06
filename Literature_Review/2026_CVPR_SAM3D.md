@@ -53,7 +53,7 @@ These takeaways serve as a blueprint for solving complex AI engineering problems
 * The Lesson: Trying to force an AI to generate a complex, multi-layered asset all at once leads to high error rates and messy outputs.
 * The Application: Explicitly decouple your target object into independent, well-defined mathematical properties. In this case, the 3D asset is broken into:Geometry ($S$): The raw structural shape.Texture ($T$): The visual surface properties and colors.Pose ($R, t, s$): The spatial orientation (rotation, translation, scale).By modularizing the output variables, the network can optimize for shape, appearance, and placement more cleanly.
 
-### **9. Use Masks as Conditionals to Simplify Scene Complexity
+### 9. Use Masks as Conditionals to Simplify Scene Complexity
 * The Lesson: Expecting a model to understand an entire unconstrained, messy real-world scene while simultaneously recreating a pixel-perfect 3D object is too computationally demanding.
 * The Application: Use an explicit 2D attention mechanism—a Mask ($M$)—as a conditioning variable ($\mid I, M$). This isolates the exact boundaries of the target object, telling the generative model precisely where to focus its reconstruction energy, while still allowing the broader image background ($I$) to provide useful context clues about lighting, depth, and scale.
 
